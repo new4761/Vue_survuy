@@ -27,20 +27,36 @@ exports.copyPetrolToSheet = functions.database.ref("/Data").onUpdate(async chang
 
   // Convert JSON to Array following structure below
   /* 
-  [
+  [ [No 1 , [0-20], [0-20],[0-4] ]
     ['COL-A', 'COL-B'],
     ['COL-A', 'COL-B']
   ]
   */
   var itemArray = [];
+  var iteminArray = [];
   var valueArray = [];
   var i =0;
   Object.keys(data).forEach((key, index) => {
-    
-    itemArray.push(key);
-    itemArray.push(data[key]);
+  //  functions.database.ref("/Data/"+key)
+  
+   
+   //itemArray.push(key);
+   
+   // console.log('Key :'+key);
+   itemArray.push(key);
+   // console.log('data["No1"] :'+data["No1"]);
+    Object.keys(data[key]).forEach((key2) => {
+   //   console.log('key2 :'+key2);
+      Object.keys(data[key][key2]).forEach((key3) => {
+        itemArray.push(data[key][key2][key3]);
+    //    console.log('data[key][key2][key3] :'+data[key][key2][key3]);
+      });
+    });
 
+
+ 
     valueArray[index] = itemArray;
+    iteminArray = [];
     itemArray = [];
   });
 
@@ -53,7 +69,7 @@ exports.copyPetrolToSheet = functions.database.ref("/Data").onUpdate(async chang
   let request = {
     auth: jwtClient,
     spreadsheetId: "1RiJAaxVQPFJG86woS5M807HXiOhTTzY6S4z8Jq5HTYk",
-    range: "Data", 
+    range: "Data!A2:AR2", 
     valueInputOption: "RAW",
     requestBody: {
       values: valueArray
