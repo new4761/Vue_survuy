@@ -3,7 +3,7 @@
       <v-layout row wrap>
                <v-flex xs8 offset-xs1>
                    <v-subheader class="pl-0 headtext">{{list.label}}</v-subheader>
-  <v-slider  validate-on-blur  @change="givevalue(index,list.val)"   v-model="list.val" :thumb-color="list.color" thumb-label :tick-labels="ticksLabels" ticks="always" step="1"  tick-size="5" max="5"></v-slider>
+  <v-slider  validate-on-blur  @change="givevalue(index,list.val)"   v-model="list.val" :thumb-color="list.color" thumb-label :tick-labels="ticksLabels" ticks="always" step="0.1"  tick-size="1" max="5.00"></v-slider>
                </v-flex>
                <v-flex  xs2>
                   <img :src="require(`@/assets/png/${img[list.val]}`)" alt="">

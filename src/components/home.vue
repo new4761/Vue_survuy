@@ -128,63 +128,64 @@ this.Save(this.key,this.list,this.list1,this.saveDatalist,)
     
  // alert("before" + key)
  Ref.once("value", function(snapshot,key) {
-  key =snapshot.numChildren()+1
+  key =snapshot.numChildren()
 // alert("InsertKey :" + key )
 
-Ref.child(key).set({
-   คำถามเเบบตัวเลือกสเกล:{
-    กลัวทำงานผิดพลาด:saveDatalist[0],
-    ไปไม่ถึงเป้าหมายที่วางไว้:saveDatalist[1],
-    ครอบครัวมีความขัดเเย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน:saveDatalist[2],
-    เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศนำ้เสียงเเละดิน:saveDatalist[3],
-    รู้สึกว่าต้องเเข่งขันหรอเปรียบเทียบ:saveDatalist[4],
-    เงินไม่พอใช้จ่าย:saveDatalist[5],
-    กล้ามเนื้อตึงหรือปวด:saveDatalist[6],
-    ปวดหัวจากความตึงเครียด:saveDatalist[7],
-    ปวดหลัง:saveDatalist[8],
-    ความอยากอาหารเปลี่ยนเเปลง:saveDatalist[9],
-    ปวดศีรษะข้างเดียว:saveDatalist[10],
-    รู้สึกวิตกกังวล:saveDatalist[11],
-    รู้สึกคับข้องใจ:saveDatalist[12],
-    รู้สึกโกรธหรือหงุดหงิด:saveDatalist[13],
-    รู้สึกเศร้า:saveDatalist[14],
-    ความจำไม่ดี:saveDatalist[15],
-    รู้สึกสับสน:saveDatalist[16],
-    ตั้งสมาธิลำบาก:saveDatalist[17],
-    รู้สึกเหนื่องง่าย:saveDatalist[18],
-    เป็นหวัดบ่อยๆ:saveDatalist[19],
-  
-  },
-  คำถามเเบบตัวเลือก:{
-    กลัวทำงานผิดพลาด:list1[0],
-    ไปไม่ถึงเป้าหมายที่วางไว้:list1[1],
-    ครอบครัวมีความขัดเเย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน:list1[2],
-    เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศนำ้เสียงเเละดิน:list1[3],
-    รู้สึกว่าต้องเเข่งขันหรอเปรียบเทียบ:list1[4],
-    เงินไม่พอใช้จ่าย:list1[5],
-    กล้ามเนื้อตึงหรือปวด:list1[6],
-    ปวดหัวจากความตึงเครียด:list1[7],
-    ปวดหลัง:list1[8],
-    ความอยากอาหารเปลี่ยนเเปลง:list1[9],
-    ปวดศีรษะข้างเดียว:list1[10],
-    รู้สึกวิตกกังวล:list1[11],
-    รู้สึกคับข้องใจ:list1[12],
-    รู้สึกโกรธหรือหงุดหงิด:list1[13],
-    รู้สึกเศร้า:list1[14],
-    ความจำไม่ดี:list1[15],
-    รู้สึกสับสน:list1[16],
-    ตั้งสมาธิลำบาก:list1[17],
-    รู้สึกเหนื่องง่าย:list1[18],
-    เป็นหวัดบ่อยๆ:list1[19],
+Ref.child("No:"+key).set({
+   คำถามเเบบตัวเลือกสเกล:
+   [
+     saveDatalist[0],
+    saveDatalist[1],
+    saveDatalist[2],
+   saveDatalist[3],
+  saveDatalist[4],
+    saveDatalist[5],
+    saveDatalist[6],
+    saveDatalist[7],
+    saveDatalist[8],
+    saveDatalist[9],
+    saveDatalist[10],
+    saveDatalist[11],
+    saveDatalist[12],
+    saveDatalist[13],
+    saveDatalist[14],
+    saveDatalist[15],
+    saveDatalist[16],
+    saveDatalist[17],
+    saveDatalist[18],
+    saveDatalist[19]
+   ]
+  ,
+  คำถามเเบบตัวเลือก:[
+   list1[0],
+   list1[1],
+  list1[2],
+    list1[3],
+    list1[4],
+    list1[5],
+    list1[6],
+    list1[7],
+   list1[8],
+    list1[9],
+    list1[10],
+    list1[11],
+    list1[12],
+    list1[13],
+    list1[14],
+    list1[15],
+    list1[16],
+    list1[17],
+    list1[18],
+    list1[19]
    
 
-  },
+  ],
 
-  เเบบประเมินเเบบสอบถาม:{
-   ความยากง่ายในการตอบคำถาม:list[0],
-    การสะท้อนความเป็นจริง:list[1],
-     โดยภาพรวมนักศึกษาชอบเเบบไหนมากกว่ากัน:list[2],
-     }
+  เเบบประเมินเเบบสอบถาม:[
+  list[0],
+    list[1],
+    list[2],
+  ]
 
 
   }

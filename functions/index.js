@@ -33,9 +33,9 @@ exports.copyPetrolToSheet = functions.database.ref("/Data").onUpdate(async chang
   ]
   */
   var itemArray = [];
-  var iteminArray = [];
+
   var valueArray = [];
-  var i =0;
+
   Object.keys(data).forEach((key, index) => {
   //  functions.database.ref("/Data/"+key)
   
@@ -56,11 +56,10 @@ exports.copyPetrolToSheet = functions.database.ref("/Data").onUpdate(async chang
 
  
     valueArray[index] = itemArray;
-    iteminArray = [];
     itemArray = [];
   });
 
-  let maxRange = valueArray.length + 1;
+
 
   // Do authorization
   await jwtClient.authorize();
@@ -69,7 +68,7 @@ exports.copyPetrolToSheet = functions.database.ref("/Data").onUpdate(async chang
   let request = {
     auth: jwtClient,
     spreadsheetId: "1RiJAaxVQPFJG86woS5M807HXiOhTTzY6S4z8Jq5HTYk",
-    range: "Data!A2:AR2", 
+    range: "Data", 
     valueInputOption: "RAW",
     requestBody: {
       values: valueArray
