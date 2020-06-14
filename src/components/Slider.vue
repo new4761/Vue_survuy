@@ -10,8 +10,8 @@
         thumb-label
        height="5px"
         ticks
-        step="0.1"
-        min="0"
+        step="1"
+        min="1"
         tick-size="1"
         max="5"
       ></v-slider>
