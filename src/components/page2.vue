@@ -2,7 +2,7 @@
   <v-stepper-content step="2">
     <v-card>
       <h2 class="text-xs-center">คำถามเเบบตัวเลือกสเกล กรุณาตอบคำถามตามความเป็นจริง</h2>
-      <h3 class="text-xs-center">(ระบุค่าระหว่าง 0-5)</h3>
+      <h3 class="text-xs-center">(ระบุค่าระหว่าง 1-5)</h3>
       <div>
         <Slider v-on:Change="Savedatapage2" :list="ex1" :index="0" />
         <Slider v-on:Change="Savedatapage2" :list="ex2" :index="1" />
@@ -41,38 +41,38 @@ export default {
   data() {
     return {
       page: 3,
-      ex1: { label: "1. กลัวทำงานผิดพลาด", val: 0, color: "blue" },
-      ex2: { label: "2. ไปไม่ถึงเป้าหมายที่วางไว้", val: 0, color: "blue" },
+      ex1: { label: "1. กลัวทำงานผิดพลาด", val: 1, color: "blue" },
+      ex2: { label: "2. ไปไม่ถึงเป้าหมายที่วางไว้", val: 1, color: "blue" },
       ex3: {
         label: "3. ครอบครัวมีความขัดเเย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน",
-        val: 0,
+        val: 1,
         color: "blue"
       },
       ex4: {
         label: "4. เป็นกังวลกับเรื่องสารพิษ หรือมลภาวะในอากาศ นำ้เสียงเเละดิน",
-        val: 0,
+        val: 1,
         color: "blue"
       },
       ex5: {
         label: "5. รู้สึกว่าต้องเเข่งขันหรอเปรียบเทียบ",
-        val: 0,
+        val: 1,
         color: "blue"
       },
-      ex6: { label: "6. เงินไม่พอใช้จ่าย", val: 0, color: "blue" },
-      ex7: { label: "7. กล้ามเนื้อตึงหรือปวด", val: 0, color: "blue" },
-      ex8: { label: "8. ปวดหัวจากความตึงเครียด", val: 0, color: "blue" },
-      ex9: { label: "9. ปวดหลัง", val: 0, color: "blue" },
-      ex10: { label: "10. ความอยากอาหารเปลี่ยนเเปลง", val: 0, color: "blue" },
-      ex11: { label: "11. ปวดศีรษะข้างเดียว", val: 0, color: "blue" },
-      ex12: { label: "12. รู้สึกวิตกกังวล", val: 0, color: "blue" },
-      ex13: { label: "13. รู้สึกคับข้องใจ", val: 0, color: "blue" },
-      ex14: { label: "14. รู้สึกโกรธ หรือหงุดหงิด", val: 0, color: "blue" },
-      ex15: { label: "15. รู้สึกเศร้า", val: 0, color: "blue" },
-      ex16: { label: "16. ความจำไม่ดี", val: 0, color: "blue" },
-      ex17: { label: "17. รู้สึกสับสน", val: 0, color: "blue" },
-      ex18: { label: "18. ตั้งสมาธิลำบาก", val: 0, color: "blue" },
-      ex19: { label: "19. รู้สึกเหนื่องง่าย", val: 0, color: "blue" },
-      ex20: { label: "20. เป็นหวัดบ่อยๆ", val: 0, color: "blue" },
+      ex6: { label: "6. เงินไม่พอใช้จ่าย", val: 1, color: "blue" },
+      ex7: { label: "7. กล้ามเนื้อตึงหรือปวด", val: 1, color: "blue" },
+      ex8: { label: "8. ปวดหัวจากความตึงเครียด", val: 1, color: "blue" },
+      ex9: { label: "9. ปวดหลัง", val: 1, color: "blue" },
+      ex10: { label: "10. ความอยากอาหารเปลี่ยนเเปลง", val: 1, color: "blue" },
+      ex11: { label: "11. ปวดศีรษะข้างเดียว", val: 1, color: "blue" },
+      ex12: { label: "12. รู้สึกวิตกกังวล", val: 1, color: "blue" },
+      ex13: { label: "13. รู้สึกคับข้องใจ", val: 1, color: "blue" },
+      ex14: { label: "14. รู้สึกโกรธ หรือหงุดหงิด", val: 1, color: "blue" },
+      ex15: { label: "15. รู้สึกเศร้า", val: 1, color: "blue" },
+      ex16: { label: "16. ความจำไม่ดี", val: 1, color: "blue" },
+      ex17: { label: "17. รู้สึกสับสน", val: 1, color: "blue" },
+      ex18: { label: "18. ตั้งสมาธิลำบาก", val: 1, color: "blue" },
+      ex19: { label: "19. รู้สึกเหนื่องง่าย", val: 1, color: "blue" },
+      ex20: { label: "20. เป็นหวัดบ่อยๆ", val: 1, color: "blue" },
     };
   },
   methods: {

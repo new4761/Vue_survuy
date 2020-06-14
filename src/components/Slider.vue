@@ -8,12 +8,11 @@
         @change="givevalue(index,list.val)"
         v-model="list.val"
         thumb-label
-       height="5px"
-        ticks
+        ticks="always"
         step="1"
-        min="1"
-        tick-size="1"
-        max="5"
+        min="1.00"
+        tick-size="5"
+        max="5.00"
       ></v-slider>
     </v-flex>
     <v-flex xs2>

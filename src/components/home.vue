@@ -60,7 +60,7 @@ export default {
   },
   data: () => ({
     //page2
-    saveDatalist: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    saveDatalist:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     //page4
     list: [0, 0, 0],
     //page3
