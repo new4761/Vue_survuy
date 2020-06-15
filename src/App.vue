@@ -12,7 +12,7 @@
 <script>
 import home from './components/home'
 
-//import HelloWorld from './components/HelloWorld'
+
 export default {
   name: 'App',
   components: {

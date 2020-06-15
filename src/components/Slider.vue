@@ -3,17 +3,17 @@
     <v-flex xs8 offset-xs1>
       <v-subheader class="pl-0 headtext">{{list.label}}</v-subheader>
       <v-slider
-
-        validate-on-blur
+ 
+       class="test"
         @change="givevalue(index,list.val)"
         v-model="list.val"
-        
+      
         ticks="always"
         step="0.1"
-        min="1.00"
+        min="1"
         thumb-label="always"
         tick-size="2"
-        max="5.00"
+        max="5"
       ></v-slider>
     </v-flex>
     <v-flex xs2>
@@ -60,8 +60,15 @@ export default {
   }
 };
 </script>
-<style scoped>
-   .v-slider__my{
-      height: 10px !important;
-    }
+<style >
+
+.v-slider__thumb-label {
+    background: #1976d2  !important;
+     border-color: #1976d2 !important;
+}
+.v-slider__thumb {
+  background-color: #1976d2 !important;
+    border-color: #1976d2 !important;
+}
+
 </style>
