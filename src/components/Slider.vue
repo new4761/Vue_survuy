@@ -7,11 +7,12 @@
         validate-on-blur
         @change="givevalue(index,list.val)"
         v-model="list.val"
-        thumb-label
+        
         ticks="always"
-        step="1"
+        step="0.1"
         min="1.00"
-        tick-size="5"
+        thumb-label="always"
+        tick-size="2"
         max="5.00"
       ></v-slider>
     </v-flex>
