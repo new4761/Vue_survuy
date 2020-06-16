@@ -48,11 +48,11 @@ export default {
   },
   methods: {
     callimg(input) {
-      if(input == 5)  return this.img[4];
-      else if (input >= 4) return this.img[3];
+      if(input == 5)  return this.img[0];
+      else if (input >= 4) return this.img[1];
       else if (input >= 3) return this.img[2];
-      else if (input >= 2) return this.img[1];
-      else  return this.img[0];
+      else if (input >= 2) return this.img[3];
+      else  return this.img[4];
     },
     givevalue(list, data) {
       this.$emit("Change", list, data);
