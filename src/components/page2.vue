@@ -1,5 +1,5 @@
 <template>
-  <v-stepper-content step="3">
+  <v-stepper-content step="2">
     <v-card>
       <h2 class="text-xs-center">คำถามเเบบตัวเลือกสเกล กรุณาตอบคำถามตามความเป็นจริง</h2>
       <h3 class="text-xs-center">(ระบุค่าระหว่าง 1-5)</h3>
@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      page: 4,
+      page: 3,
       ex1: { label: "1. กลัวทำงานผิดพลาด", val: 1, color: "blue" },
       ex2: { label: "2. ไปไม่ถึงเป้าหมายที่วางไว้", val: 1, color: "blue" },
       ex3: {
