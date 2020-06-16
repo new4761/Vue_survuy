@@ -96,6 +96,7 @@ export default {
       //    //   eslint-disable-next-line no-console
       //         console.log(this.list);
       Axios.post("https://webserv.kmitl.ac.th/new4761/apis/addData.php", {
+        formID:1,
         saveDatalist: this.saveDatalist,
         list1: this.list1,
         list2: this.list
