@@ -1,6 +1,6 @@
 
 <template>
-  <v-stepper-content step="3">
+  <v-stepper-content step="2">
     <v-card>
       <div>
         <h2 class="text-xs-center">คำถามเเบบตัวเลือกตอบกรุณาตอบคำถามตามความเป็นจริง</h2>
@@ -73,7 +73,7 @@ export default {
         null
       ],
       valid: true,
-      page: 4,
+      page: 3,
 
       snackbar: false
     };

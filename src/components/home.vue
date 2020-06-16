@@ -28,10 +28,8 @@
               <v-stepper-items>
                 <page1 v-on:next="tab" />
 
-                <page2 v-on:SaveDatapage2="chagelistPage2" v-on:next="tab" />
-
                 <page3 v-on:SavedataPage3="chagelistPage3" v-on:next="tab" />
-
+                <page2 v-on:SaveDatapage2="chagelistPage2" v-on:next="tab" />
                 <page4
                   v-on:SavedataPage4="chagelistPage4"
                   v-on:SaveData="submitData"
@@ -60,7 +58,7 @@ export default {
   },
   data: () => ({
     //page2
-    saveDatalist:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    saveDatalist: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     //page4
     list: [0, 0, 0],
     //page3
@@ -75,7 +73,7 @@ export default {
     chagelistPage2(data, index) {
       this.saveDatalist[index] = data;
       // eslint-disable-next-line no-console
-     // console.log(this.saveDatalist);
+      // console.log(this.saveDatalist);
       //alert("name : " +index +" data:" + data)
     },
 
@@ -83,23 +81,27 @@ export default {
       this.list1[Num] = listInput;
 
       // eslint-disable-next-line no-console
-    //  console.log(this.list1);
+      //  console.log(this.list1);
       // alert("seed "+this.list1[Num])
     },
     chagelistPage4(listInput, Num) {
       this.list[Num] = listInput;
-
-
     },
 
-
-
     submitData() {
-       Axios
-      .post('https://webserv.kmitl.ac.th/new4761/apis/addData.php',{saveDatalist:this.saveDatalist,
-      list1:this.list1,list2:this.list})
-      // eslint-disable-next-line no-console
-      .then(response => console.log(response.data))
+      //  //   eslint-disable-next-line no-console
+      //    console.log(this.saveDatalist);
+      //      //   eslint-disable-next-line no-console
+      //  console.log(this.list1);
+      //    //   eslint-disable-next-line no-console
+      //         console.log(this.list);
+      Axios.post("https://webserv.kmitl.ac.th/new4761/apis/addData.php", {
+        saveDatalist: this.saveDatalist,
+        list1: this.list1,
+        list2: this.list
+      })
+        // eslint-disable-next-line no-console
+        .then(response => console.log(response.data));
     }
   }
 };
