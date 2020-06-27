@@ -58,6 +58,7 @@ export default {
   },
   data: () => ({
     //page2
+    
     saveDatalist: [1, 1, 1, 1, 1,
      1, 1, 1, 1, 1,
       1, 1, 1, 1, 1,
@@ -98,11 +99,12 @@ export default {
       //  console.log(this.list1);
       //    //   eslint-disable-next-line no-console
       //         console.log(this.list);
-      Axios.post("http://mathsurveykmitl.cu.ma/apis/addData.php", {
+      Axios.post("https://surveykmitldashboard.tk/apis/addData.php", {
         formID:1,
         saveDatalist: this.saveDatalist,
         list1: this.list1,
-        list2: this.list
+        list2: this.list,
+        
       })
         // eslint-disable-next-line no-console
         .then(response => console.log(response.data));
