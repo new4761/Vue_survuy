@@ -98,7 +98,7 @@ export default {
       //  console.log(this.list1);
       //    //   eslint-disable-next-line no-console
       //         console.log(this.list);
-      Axios.post("http://mathsurveykmitl.cu.ma//apis/addData.php", {
+      Axios.post("http://mathsurveykmitl.cu.ma/apis/addData.php", {
         formID:1,
         saveDatalist: this.saveDatalist,
         list1: this.list1,
